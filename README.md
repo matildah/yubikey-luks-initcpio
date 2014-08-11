@@ -30,17 +30,17 @@ Install
 ----------------
 
 To set up the yubikey, you do:
-ykpersonalize -v -1 -ochal-resp -ochal-hmac -ohmac-lt64 -ochal-btn-trig -oserial-api-visible
+    ykpersonalize -v -1 -ochal-resp -ochal-hmac -ohmac-lt64 -ochal-btn-trig -oserial-api-visible
 
 The -ochal-btn-trig option makes it such that instead of immediately
 returning data in response to a challenge, it makes the yubikey's LED
 blink and only returns data when you touch the yubikey's button.
 
 To add the appropriate keyslot in the LUKS volume, do:
-read -s PW
-ykchalresp "$PW" | tr -d '\n' > mykeyfile
-cryptsetup luksAddKey /dev/whatever mykeyfile
-rm mykeyfile
+    read -s PW
+    ykchalresp "$PW" | tr -d '\n' > mykeyfile
+    cryptsetup luksAddKey /dev/whatever mykeyfile
+    rm mykeyfile
 
 Put the stuff in hooks/ into /etc/initcpio/hooks/ and the stuff in
 install/ into /etc/initcpio/install/ and edit your /etc/mkinitcpio.conf
