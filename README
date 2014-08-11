@@ -27,7 +27,8 @@ blink and only returns data when you touch the yubikey's button.
 
 Put the stuff in hooks/ into /etc/initcpio/hooks/ and the stuff in
 install/ into /etc/initcpio/install/ and edit your /etc/mkinitcpio.conf
-appropriately.
+appropriately. Replace "/home/thz/bin/ykchalresp" in install/yubiluks
+with the correct path to ykchalresp.
 
 To add the appropriate keyslot in the LUKS volume, do:
 read -s PW
