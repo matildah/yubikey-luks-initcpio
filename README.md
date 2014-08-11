@@ -35,8 +35,8 @@ material. This is known as the evil maid attack. **Using the provided
 code does not make you more or less vulnerable to evil maid attacks**
 for the simple reason that every system with attacker-modifiable code
 that you cannot verify with a root of trust that the attacker cannot
-control (such as a TPM) is vulnerable to evil maid attacks, no matter
-what the code in question is. A simple way to make evil maid attacks
+control (such as a TPM) is vulnerable to evil maid attacks, **no matter
+what the code in question is**. A simple way to make evil maid attacks
 harder to implement is to keep your bootloader, kernel, and initramfs
 on some USB flash media that never leaves your sight. Be sure to make
 copies of it, USB flash media can fail.
