@@ -26,7 +26,7 @@ Make sure to have a backup keyslot in your LUKS header (or to have
 saved *somewhere* a LUKS header for that volume with the same master key
 with a keyslot for which you know the passphrase).
 
-Evil maid warning
+A note about evil maid attacks
 ----------------
 If it is possible that someone can modify any of your {bootloader,
 kernel, initramfs} (usually these are in whatever partition you mount
