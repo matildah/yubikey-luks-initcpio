@@ -1,0 +1,17 @@
+#!/bin/bash
+
+build() {
+    add_binary "/home/thz/bin/ykchalresp"
+    add_binary "tr"
+
+    add_runscript
+}
+
+help() {
+    cat <<HELPEOF
+This hook generates a temporary keyfile on the fly for LUKS using a
+user-supplied password that is fed to a yubikey in HMAC-SHA1 challenge
+response mode. It must be run before the "encrypt" hook.
+HELPEOF
+}
+
