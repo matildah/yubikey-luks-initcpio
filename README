@@ -17,3 +17,8 @@ INSTALL
 You need to put "yubiluks" *before* "encrypt" in the HOOKS line in your
 /etc/mkinitcpio.conf file in order for the yubikey things to happen
 before cryptsetup is invoked.
+
+To set up the yubikey, you do:
+ykpersonalize -1 -ochal-resp -ochal-hmac -ohmac-lt64 -oserial-api-visible
+
+
