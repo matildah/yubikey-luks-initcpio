@@ -1,0 +1,8 @@
+#!/usr/bin/ash
+
+run_hook() {
+    echo -n "enter yubikey password followed by enter: "
+    read -s PW
+    ykchalresp "$PW" | tr -d '\n' > /crypto_keyfile.bin
+}
+
