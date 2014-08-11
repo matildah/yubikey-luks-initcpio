@@ -1,0 +1,14 @@
+initcpio hooks to allow you to use a yubikey in challenge-response HMAC
+mode to do 2-factor authentication for LUKS.
+
+password you type in -> yubikey hmacs it with its secret key -> yubikey
+returns the password for LUKS
+
+This has the property that someone with access to your yubikey cannot
+trivially gain useful information (this is not the case if you config
+it to output a static passphrase which you concatenate to a password
+you type in)
+
+Naturally, if someone knows your password and later has access to your
+yubikey, they can can get the LUKS password.
+
