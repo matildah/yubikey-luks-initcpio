@@ -1,8 +1,11 @@
 #!/usr/bin/ash
 
 run_hook() {
+    echo "PLUG IN YOUR YUBIKEY NOW IF YOU WANT TO USE IT"
     echo -n "enter yubikey password followed by enter: "
     read -s PW
     ykchalresp "$PW" | tr -d '\n' > /crypto_keyfile.bin
+    echo
+    echo "you may unplug yubikey now"
 }
 
