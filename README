@@ -12,3 +12,8 @@ you type in)
 Naturally, if someone knows your password and later has access to your
 yubikey, they can can get the LUKS password.
 
+INSTALL
+
+You need to put "yubiluks" *before* "encrypt" in the HOOKS line in your
+/etc/mkinitcpio.conf file in order for the yubikey things to happen
+before cryptsetup is invoked.
